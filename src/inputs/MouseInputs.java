@@ -1,11 +1,11 @@
 package inputs;
 
-import gamestates.Gamestate;
-import main.GamePanel;
-
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+
+import gamestates.Gamestate;
+import main.GamePanel;
 
 public class MouseInputs implements MouseListener, MouseMotionListener {
 
@@ -103,13 +103,13 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		// TODO:  this method must exist, but we aren't putting anything here.
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-		// TODO:  this method must exist, but we aren't putting anything here.
+
 	}
 
 }

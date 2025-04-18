@@ -1,23 +1,27 @@
 package objects;
 
+import main.Game;
+import utilz.Constants;
+
 public class Cannon extends GameObject {
 
-    private int tileY;
+	private int tileY;
 
-    public Cannon(int x, int y, int objType) {
-        super(x, y, objType);
-        // TODO: set tileY to y / Game.TILES_SIZE
-        // TODO: call initHitbox() passing in 40, 26
-        // TODO: subtract (int)(4 * Game.SCALE) from hitbox.x
-        // TODO: add (int)(6 * Game.SCALE) to hitbox.y
-    }
+	public Cannon(int x, int y, int objType) {
+		super(x, y, objType);
+		tileY = y / Constants.Game.TILES_SIZE;
+		initHitbox(40, 26);
+		hitbox.x -= (int) (4 * Constants.Game.SCALE);
+		hitbox.y += (int) (6 * Constants.Game.SCALE);
+	}
 
-    public void update(){
-        // TODO: check if doAnimation is true and if so updateAnimationTick()
-    }
+	public void update() {
+		if (doAnimation)
+			updateAnimationTick();
+	}
 
-    public int getTileY() {
-        // TODO: return tileY
-        return 0; // TODO: remove when done
-    }
+	public int getTileY() {
+		return tileY;
+	}
+
 }

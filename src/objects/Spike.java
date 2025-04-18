@@ -1,12 +1,18 @@
 package objects;
 
-public class Spike extends GameObject{
-    public Spike(int x, int y, int objType) {
-        super(x, y, objType);
+import main.Game;
+import utilz.Constants;
 
-        // TODO: call initHitbox passing in 32, and 16
-        // TODO: set xDrawOffset to 0
-        // TODO: set yDrawOffset to (int) (Game.SCALE * 16)
-        // TODO: add yDrawOffset to hitbox.y
-    }
+public class Spike extends GameObject{
+
+	public Spike(int x, int y, int objType) {
+		super(x, y, objType);
+		
+		initHitbox(32, 16);
+		xDrawOffset = 0;
+		yDrawOffset = (int)(Constants.Game.SCALE * 16);
+		hitbox.y += yDrawOffset;
+		
+	}
+
 }
